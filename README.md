@@ -14,7 +14,7 @@ This project implements an **RGB LED control system** using an **Arduino or ESP3
 - **RGB LED (Common Cathode or Three Separate LEDs)**
 - **Jumper Wires**
 - **Push Button**
-- **Breadboard **
+- **Breadboard**
 
 ---
 
