@@ -1,9 +1,11 @@
+// Define LED pins
 int blue = 9;
 int green = 10;
-int red = 11;
+int red = 11; 
 #define button 2
+// Define button pin
 
-int mode =0;
+int mode =0; // Variable to keep track of the current mode (color state)
 
 void setup(){
   pinMode(blue,OUTPUT);
@@ -13,11 +15,13 @@ void setup(){
 }
 
 void loop(){
+  // Check if the button is pressed (LOW because of INPUT_PULLUP)
   if (digitalRead(button) == LOW){
-    mode = mode+1;
+    mode = mode+1; // Increment mode to change the color
     delay(400);
   }
-
+  
+// Set LED colors based on the current mode
   if (mode == 0){
     analogWrite(blue, 255);
     analogWrite(green,0);
@@ -62,8 +66,8 @@ void loop(){
     analogWrite(blue, 0);
     analogWrite(green,0);
     analogWrite(red,0);
-    delay(1000);
-    mode = 0;
+    delay(1000); // Optional delay before restarting the cycle
+    mode = 0; // Reset the mode to restart color sequence
   }
   
 }
